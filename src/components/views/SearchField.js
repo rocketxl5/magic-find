@@ -224,6 +224,7 @@ const SearchField = ({
     <Wrapper>
       <Search>
         <Input
+          className="search-field"
           type="text"
           value={isOn ? searchTerm : ''}
           onChange={(e) => handleChange(e)}
@@ -286,11 +287,9 @@ const Input = styled.input`
   display: inline-block;
   padding: 10px;
   font-size: 1em;
-  border: 1px solid #fff;
   width: 100%;
   &:focus {
     outline: none;
-    border: 1px solid #fff;
     box-shadow: 0;
   }
 `;
