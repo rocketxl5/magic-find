@@ -25,7 +25,7 @@ const UserPage = () => {
         <section className="user-page-section to-store">
           <h2>Manage Your Store</h2>
           <article>
-            <p>Go to your to your store to modify it's content.</p>
+            <p>Go to your store to modify it's content.</p>
             <p>
               You can add or remove a card. You can also modify the information
               of existing cards.
@@ -38,12 +38,12 @@ const UserPage = () => {
           <h2>Add A New Card</h2>
           <article>
             <p>
-              Search the Skyfall API for a specific card you wish to sell. You
-              can set the condition, the quantity you want to sell and the price
-              you wish to ask. You can also leave a comment to propestive
-              buyers.
+              Search the Skryfall API for a specific card you wish to sell. You
+              can set the condition of the card, the quantity you want to sell
+              and the price you wish to ask. You can also leave a comment to
+              prospective buyers.
             </p>
-            <p>Selling and buying cards as never been so easy!</p>
+            <p>Selling and buying cards has never been so easy!</p>
           </article>
         </section>
       </Link>
@@ -51,7 +51,7 @@ const UserPage = () => {
         <section className="user-page-section  to-profile">
           <h2>Modify Your Profile</h2>
           <article>
-            <p>This section is under currently under development.</p>
+            <p>This section is currently under development.</p>
           </article>
         </section>
       </Link>
