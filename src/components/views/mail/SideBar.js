@@ -60,7 +60,7 @@ const SideBar = ({
       body: JSON.stringify(updates)
     };
 
-    fetch(`/api/messages/`, options)
+    fetch(`https://magic-find.herokuapp.com/api/messages/`, options)
       .then((res) => res.json())
       .then((data) => {
         setLoading(false);
@@ -96,7 +96,7 @@ const SideBar = ({
       body: JSON.stringify(updates)
     };
 
-    fetch(`/api/messages/delete`, options)
+    fetch(`https://magic-find.herokuapp.com/api/messages/delete`, options)
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

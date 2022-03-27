@@ -51,7 +51,7 @@ const AddCard = () => {
         headers: headers,
         body: JSON.stringify(newCard)
       };
-      fetch('/api/cards', options)
+      fetch('https://magic-find.herokuapp.com/api/cards', options)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);

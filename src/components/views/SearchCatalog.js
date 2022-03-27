@@ -95,7 +95,7 @@ const SearchCatalog = () => {
         method: 'GET',
         headers: headers
       };
-      fetch(`/api/catalog`, options)
+      fetch(`https://magic-find.herokuapp.com/api/catalog`, options)
         .then((res) => res.json())
         .then((data) => {
           setResults(data.data);
@@ -159,7 +159,7 @@ const SearchCatalog = () => {
       headers: headers
     };
 
-    fetch(`/api/catalog/${search}`, options)
+    fetch(`https://magic-find.herokuapp.com/api/catalog/${search}`, options)
       .then((res) => res.json())
       .then((data) => {
         // localStorage.setItem('searchCatalog', search);

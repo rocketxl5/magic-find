@@ -66,7 +66,7 @@ const Register = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newUser)
     };
-    fetch('/api/users', options)
+    fetch('https://magic-find.herokuapp.com/api/users', options)
       .then((res) => res.json())
       .then((data) => {
         console.log('data', data);

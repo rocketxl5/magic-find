@@ -77,7 +77,7 @@ const Message = () => {
       })
     };
 
-    fetch('/api/messages', options)
+    fetch('https://magic-find.herokuapp.com/api/messages', options)
       .then((res) => res.json())
       .then((data) => {
         // Reinitialize states

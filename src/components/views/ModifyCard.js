@@ -36,7 +36,7 @@ const Modify = () => {
         headers: headers,
         body: JSON.stringify(updates)
       };
-      fetch(`/api/cards/modify`, options)
+      fetch(`https://magic-find.herokuapp.com/api/cards/modify`, options)
         .then((res) => res.json())
         .then((data) => {
           // console.log(data);

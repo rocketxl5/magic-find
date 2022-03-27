@@ -23,7 +23,7 @@ const CartItem = ({ item, setIsUpdating }) => {
       };
 
       fetch(
-        `/api/catalog/${item.name}/${item._id}/${item.quantity_selected}`,
+        `https://magic-find.herokuapp.com/api/catalog/${item.name}/${item._id}/${item.quantity_selected}`,
         options
       )
         .then((res) => res.json())

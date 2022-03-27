@@ -53,7 +53,10 @@ const MailBox = () => {
         headers: headers
       };
 
-      fetch(`/api/messages/${path}/${user.id}`, options)
+      fetch(
+        `https://magic-find.herokuapp.com/api/messages/${path}/${user.id}`,
+        options
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data.data) {

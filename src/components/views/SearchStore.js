@@ -149,7 +149,10 @@ const SearchStore = () => {
       headers: headers
     };
 
-    fetch(`/api/cards/${search}/${user.id}`, options)
+    fetch(
+      `https://magic-find.herokuapp.com/api/cards/${search}/${user.id}`,
+      options
+    )
       .then((res) => res.json())
       .then((data) => {
         // localStorage.setItem('storeCards', JSON.stringify(data.data));
@@ -178,7 +181,7 @@ const SearchStore = () => {
       method: 'GET',
       headers: headers
     };
-    fetch(`/api/cards/${user.id}`, options)
+    fetch(`https://magic-find.herokuapp.com/api/cards/${user.id}`, options)
       .then((res) => res.json())
       .then((data) => {
         // localStorage.setItem('storeCards', JSON.stringify(data.data));

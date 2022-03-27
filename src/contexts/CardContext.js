@@ -44,7 +44,7 @@ export const CardProvider = ({ children }) => {
         method: 'GET',
         headers: headers
       };
-      fetch(`/api/cards/${id}`, options)
+      fetch(`https://magic-find.herokuapp.com/api/cards/${id}`, options)
         .then((res) => res.json())
         .then((data) => {
           setUserStoreContent(data.data);

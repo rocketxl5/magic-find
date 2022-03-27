@@ -27,7 +27,7 @@ const Remove = () => {
       headers: headers,
       body: JSON.stringify(input)
     };
-    fetch(`/api/cards/`, options)
+    fetch(`https://magic-find.herokuapp.com/api/cards/`, options)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

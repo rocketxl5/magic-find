@@ -45,7 +45,7 @@ function ShoppingCart() {
         body: JSON.stringify(input)
       };
 
-      fetch(`/api/cart/`, options)
+      fetch(`https://magic-find.herokuapp.com/api/cart/`, options)
         .then((res) => res.json())
         .then((data) => {
           // setLoading(false);
