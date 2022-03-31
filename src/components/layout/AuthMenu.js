@@ -19,13 +19,19 @@ function AuthMenu({ setDisplay, setUser }) {
   return (
     <Fragment>
       <li>
-        <Link to="/store">Store</Link>
+        <Link onClick={(e) => setDisplay(false)} to="/store">
+          Store
+        </Link>
       </li>
       <li>
-        <Link to="/profile">Profile</Link>
+        <Link onClick={(e) => setDisplay(false)} to="/profile">
+          Profile
+        </Link>
       </li>
       <li>
-        <Link to="/settings">Settings</Link>
+        <Link onClick={(e) => setDisplay(false)} to="/settings">
+          Settings
+        </Link>
       </li>
       <li>
         <div className="signout" onClick={() => singout()}>
