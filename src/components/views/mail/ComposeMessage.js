@@ -77,7 +77,7 @@ const Message = () => {
       })
     };
 
-    fetch('https://magic-find.herokuapp.com/api/messages', options)
+    fetch('/api/messages', options)
       .then((res) => res.json())
       .then((data) => {
         // Reinitialize states
@@ -103,7 +103,7 @@ const Message = () => {
   }, [count]);
 
   return (
-    <div className="wrapper">
+    <div className="message-container">
       <main className="content">
         <div className="message-content">
           <section className="message-form">
