@@ -36,7 +36,7 @@ const Login = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userInput)
     };
-    fetch('https://magic-find.herokuapp.com/api/users/login', options)
+    fetch('/api/users/login', options)
       .then((res) => {
         if (res.ok) {
           return res.json();
