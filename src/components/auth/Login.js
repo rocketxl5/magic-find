@@ -38,13 +38,14 @@ const Login = () => {
     };
     fetch('/api/users/login', options)
       .then((res) => {
-        if (res.ok) {
-          return res.json();
-        } else {
-          return res.text().then((text) => {
-            throw new Error(text);
-          });
-        }
+        // if (res.ok) {
+        //   return res.json();
+        // } else {
+        //   return res.text().then((text) => {
+        //     throw new Error(text);
+        //   });
+        // }
+        res.json();
       })
       .then((data) => {
         console.log(data.data);
