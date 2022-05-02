@@ -95,7 +95,7 @@ const SearchCatalog = () => {
         method: 'GET',
         headers: headers
       };
-      fetch(`https://magic-find.herokuapp.com/api/catalog`, options)
+      fetch(`api/catalog`, options)
         .then((res) => res.json())
         .then((data) => {
           setResults(data.data);
