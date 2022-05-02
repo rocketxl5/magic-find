@@ -40,11 +40,12 @@ const Login = () => {
       .then((res) => {
         if (res.ok) {
           return res.json();
-        } else {
-          return res.text().then((text) => {
-            throw new Error(text);
-          });
         }
+        // else {
+        //   return res.text().then((text) => {
+        //     throw new Error(text);
+        //   });
+        // }
       })
       .then((data) => {
         console.log(data.data);
