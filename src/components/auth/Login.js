@@ -36,16 +36,15 @@ const Login = () => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userInput)
     };
-    fetch('api/users/login', options)
+    fetch('/api/users/login', options)
       .then((res) => {
         if (res.ok) {
           return res.json();
+        } else {
+          return res.text().then((text) => {
+            throw new Error(text);
+          });
         }
-        // else {
-        //   return res.text().then((text) => {
-        //     throw new Error(text);
-        //   });
-        // }
       })
       .then((data) => {
         console.log(data.data);
