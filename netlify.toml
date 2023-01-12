@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/login"
+  from = "https://magic-find.netlify.app"
   to = "https://magic-find.herokuapp.com/api/users/login"
   status = 200
   force = true
