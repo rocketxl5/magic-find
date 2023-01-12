@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/login"
+  to = "https://magic-find.herokuapp.com/api/users/login"
+  status = 200
+  force = true
