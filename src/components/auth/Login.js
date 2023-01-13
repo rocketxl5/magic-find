@@ -33,6 +33,7 @@ const Login = () => {
     };
     const options = {
       method: 'POST',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userInput),
     };
