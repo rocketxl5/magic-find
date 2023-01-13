@@ -102,7 +102,7 @@ const Search = () => {
     }
     // setLoading(true);
     // console.log(sanitizeString(searchTerm));
-    const headers = { method: 'GET', mode: 'no-cors' };
+    const headers = { method: 'GET' };
     fetch(
       `https://api.scryfall.com/cards/named?exact=${sanitizeString(searching)}`,
       headers

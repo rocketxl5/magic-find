@@ -156,7 +156,6 @@ const SearchCatalog = () => {
     // headers.append('auth-token', token);
     const options = {
       method: 'GET',
-      mode: 'no-cors',
       headers: headers,
     };
 
