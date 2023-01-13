@@ -3,7 +3,7 @@ import React, {
   useContext,
   useState,
   useEffect,
-  useRef
+  useRef,
 } from 'react';
 import { useLocation } from 'react-router-dom';
 import Card from './Card';
@@ -102,7 +102,7 @@ const Search = () => {
     }
     // setLoading(true);
     // console.log(sanitizeString(searchTerm));
-    const headers = { method: 'GET' };
+    const headers = { method: 'GET', mode: 'no-cors' };
     fetch(
       `https://api.scryfall.com/cards/named?exact=${sanitizeString(searching)}`,
       headers
