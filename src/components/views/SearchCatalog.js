@@ -3,7 +3,7 @@ import React, {
   Fragment,
   useState,
   useEffect,
-  useRef
+  useRef,
 } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import StoreItem from './StoreItem';
@@ -93,7 +93,7 @@ const SearchCatalog = () => {
 
       const options = {
         method: 'GET',
-        headers: headers
+        headers: headers,
       };
       fetch(`https://magic-find.herokuapp.com/api/catalog`, options)
         .then((res) => res.json())
@@ -156,7 +156,8 @@ const SearchCatalog = () => {
     // headers.append('auth-token', token);
     const options = {
       method: 'GET',
-      headers: headers
+      mode: 'no-cors',
+      headers: headers,
     };
 
     fetch(`https://magic-find.herokuapp.com/api/catalog/${search}`, options)
@@ -175,7 +176,7 @@ const SearchCatalog = () => {
         if (path !== 'catalog') {
           history.push({
             pathname: `/catalog/${search}`,
-            state: { result: data.data }
+            state: { result: data.data },
           });
         }
       })
