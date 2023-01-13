@@ -29,14 +29,17 @@ const Login = () => {
     }
     const userInput = {
       email,
-      password
+      password,
     };
     const options = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(userInput)
+      body: JSON.stringify(userInput),
     };
-    fetch('https://magic-find.herokuapp.com/api/users/login', options)
+    fetch(
+      'https://cors-anywhere.herokuapp.com/https://magic-find.herokuapp.com/api/users/login',
+      options
+    )
       .then((res) => {
         if (res.ok) {
           return res.json();
@@ -57,13 +60,13 @@ const Login = () => {
           id: data.data._id,
           cards: data.data.cards,
           date: data.data.date,
-          messages: data.data.messages
+          messages: data.data.messages,
         };
         setUser(user);
 
         localStorage.setItem('user', JSON.stringify(user));
         history.push({
-          pathname: '/me'
+          pathname: '/me',
         });
       })
       .catch((error) => {
